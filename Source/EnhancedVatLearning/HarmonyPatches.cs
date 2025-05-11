@@ -30,7 +30,6 @@ namespace EnhancedVatLearning
             harmony.Patch(AccessTools.Method(typeof(ChoiceLetter_GrowthMoment), "CacheLetterText"),
                 new HarmonyMethod(patchType, nameof(GrowthMomentPatch))); 
             // Prefixing this moment to ensure any mod that alters stuff in the configure has already taken effect
-
         }
 
         public static void VatLearnPatch(Hediff_VatLearning __instance)
