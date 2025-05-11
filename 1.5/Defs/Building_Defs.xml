@@ -52,7 +52,7 @@
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Facility">
-                <maxSimultaneous>8</maxSimultaneous>
+                <maxSimultaneous>1</maxSimultaneous>
                 <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
             </li>
         </comps>
@@ -110,7 +110,7 @@
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Facility">
-                <maxSimultaneous>999</maxSimultaneous>
+                <maxSimultaneous>1</maxSimultaneous>
                 <maxDistance>6.9</maxDistance>
             </li>
         </comps>
@@ -170,7 +170,7 @@
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Facility">
-                <maxSimultaneous>999</maxSimultaneous>
+                <maxSimultaneous>1</maxSimultaneous>
                 <maxDistance>6.9</maxDistance>
             </li>
         </comps>

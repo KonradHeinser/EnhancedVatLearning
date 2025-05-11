@@ -36,6 +36,9 @@
       <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,11 +59,11 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EVLDefOf.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="HediffCompProperties_EnhancedLearning.cs" />
     <Compile Include="HediffComp_EnhancedLearning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
