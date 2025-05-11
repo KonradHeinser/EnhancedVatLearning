@@ -23,9 +23,11 @@ namespace EnhancedVatLearning
                 return;
             }
 
-            float additionalBoost = 0;
-
             CompAffectedByFacilities facilityComp = vat.TryGetComp<CompAffectedByFacilities>();
+            if (facilityComp.LinkedFacilitiesListForReading.NullOrEmpty())
+                return;
+
+            float additionalBoost = 0;
             int linkedVRPods = 0;
             int linkedCognitionPods = 0;
 
@@ -42,14 +44,8 @@ namespace EnhancedVatLearning
 
                     foreach (Thing linked in comp.LinkedBuildings)
                     {
-                        if (linked == vat || linked is not Building_GrowthVat)
-                        {
-                            continue;
-                        }
-
-                        Building_GrowthVat linkedVat = linked as Building_GrowthVat;
-
-                        if (linkedVat.SelectedPawn == null)
+                        if (linked == vat || linked is not Building_GrowthVat linkedVat ||
+                            linkedVat.SelectedPawn == null)
                         {
                             continue;
                         }
@@ -70,14 +66,8 @@ namespace EnhancedVatLearning
 
                     foreach (Thing linked in comp.LinkedBuildings)
                     {
-                        if (linked == vat || linked is not Building_GrowthVat)
-                        {
-                            continue;
-                        }
-
-                        Building_GrowthVat linkedVat = linked as Building_GrowthVat;
-
-                        if (vat.SelectedPawn == null)
+                        if (linked == vat || linked is not Building_GrowthVat linkedVat ||
+                            linkedVat.SelectedPawn == null)
                         {
                             continue;
                         }
